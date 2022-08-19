@@ -1,7 +1,11 @@
 version: "3.9"
 services:
   web:
-    image: wordpress:php8.1-apache
+    build:
+      context: ./services/web
+      args:
+        USER_ID: ${USER_ID:-0}
+        GROUP_ID: ${GROUP_ID:-0}
     depends_on:
       - database
       - smtp
