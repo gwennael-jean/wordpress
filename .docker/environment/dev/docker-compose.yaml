@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  database:
+    ports:
+      - ${PORT_DATABASE}:3306
+
+  web:
+    ports:
+      - ${PORT_WEB}:80
+
+  phpmyadmin:
+    ports:
+      - ${PORT_PHPMYADMIN}:80
+
+  smtp:
+    ports:
+      - ${PORT_MAILDEV}:80
