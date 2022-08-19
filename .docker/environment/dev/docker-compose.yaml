@@ -15,3 +15,6 @@ services:
   smtp:
     ports:
       - ${PORT_MAILDEV}:80
+
+  node:
+    command: npm run watch

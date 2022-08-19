@@ -38,3 +38,8 @@ services:
 
   smtp:
     image: maildev/maildev
+
+  node:
+    build: ./services/node
+    volumes:
+      - ${SOURCE_ROOT_FOLDER}:/app
